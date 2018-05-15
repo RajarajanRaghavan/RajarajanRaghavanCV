@@ -9,12 +9,46 @@
 <style>
     html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     div, img{border-radius: 15px;}
-</style>
+    #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    top: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: teal; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
 
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+</style>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 0) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+</script>
 <body class="w3-light-grey">
+<button  id="myBtn" title="Go to top" onclick="window.location.href='RajarajanRaghavan Resume.pdf'">Download My Resume</button>
 
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width:1400px;">
+        
+
 
         <!-- The Grid -->
         <div class="w3-row-padding">
@@ -33,7 +67,7 @@
                             <h2>Rajarajan Raghavan</h2>
                         </p>
                         <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Fresher - Full Stack Developer</p>
-                        <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Bangalore, Karnataka ,India</p>
+                        <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Bangalore, Karnataka, India.</p>
                         <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>rajarajanraghavan@gmail.com</p>
                         <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+91-8870540645</p>
                         <hr>
@@ -201,7 +235,7 @@
         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity" onclick="window.location.href='https://www.linkedin.com/in/rajarajan-raghavan-20262814'"></i>
-
+        
     </footer>
 
 </body>
